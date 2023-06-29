@@ -1,10 +1,9 @@
 package io.dnatechnology.dnataskandroid.ui.viewbased
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
-import androidx.compose.runtime.collectAsState
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import io.dnatechnology.dnataskandroid.R
@@ -22,9 +21,7 @@ class RootViewActivity : AppCompatActivity() {
         setContentView(R.layout.activity_root_view)
 
         productsModel = ViewModelProvider(this).get(ProductsModel::class.java)
-
         adapter = ArrayAdapter<Product>(this, R.layout.product_item)
-
 
         lifecycleScope.launchWhenStarted {
             productsModel.products.collect { data ->

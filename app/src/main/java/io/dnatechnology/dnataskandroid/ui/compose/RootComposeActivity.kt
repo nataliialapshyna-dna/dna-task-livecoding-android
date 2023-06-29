@@ -37,15 +37,6 @@ class RootComposeActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MainBackground
                 ) {
-//                    Text(
-//                        text = "Your content",
-//                        color = MainText,
-//                        fontSize = 40.sp,
-//                        fontWeight = FontWeight.Bold,
-//                        modifier = Modifier
-//                            .fillMaxWidth()
-//                            .padding(top = 48.dp)
-//                    )
                     ProductsView(productsModel = productsModel)
                 }
             }
